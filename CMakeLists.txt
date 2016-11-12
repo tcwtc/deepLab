@@ -67,8 +67,6 @@ configure_file(cmake/Templates/caffe_config.h.in "${PROJECT_BINARY_DIR}/caffe_co
 set(Caffe_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
 include_directories(${Caffe_INCLUDE_DIR} ${PROJECT_BINARY_DIR})
 include_directories(BEFORE src) # This is needed for gtest.
-find_package(MATIO REQUIRED)
-include_directories(${MATIO_INCLUDE_DIR})
 
 
 # ---[ Subdirectories
