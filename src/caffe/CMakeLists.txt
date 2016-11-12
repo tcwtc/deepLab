@@ -18,19 +18,7 @@ if(HAVE_CUDA)
 endif()
 
 add_library(caffe ${srcs})
-# target_link_libraries(caffe proto ${Caffe_LINKER_LIBS})
-target_link_libraries(caffe proto
-${BLAS_LIBRARIES}
-${Boost_LIBRARIES}
-${GFLAGS_LIBRARIES}
-${GLOG_LIBRARIES}
-${HDF5_LIBRARIES}
-${LEVELDB_LIBS}
-${LMDB_LIBRARIES}
-${OpenCV_LIBS}
-${CMAKE_THREAD_LIBS_INIT}
-${MATIO_LIBRARIES}
-)
+target_link_libraries(caffe proto ${Caffe_LINKER_LIBS})
 
 caffe_default_properties(caffe)
 set_target_properties(caffe PROPERTIES

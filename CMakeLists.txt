@@ -56,9 +56,6 @@ endif()
 
 add_definitions(-DGTEST_USE_OWN_TR1_TUPLE)
 
-find_package(MATIO REQUIRED)
-include_directories(${MATIO_INCLUDE_DIR})
-
 # ---[ Warnings
 caffe_warnings_disable(CMAKE_CXX_FLAGS -Wno-sign-compare -Wno-uninitialized)
 
